@@ -40,14 +40,63 @@
                     And then let us twain, being the moon,
                     were she such a case as fills m
                 </p>
-                <div>Next</div>
+                <a href="/article.php">
+                    <div class="more">Next</div>
+                </a>
             </div>
-            <div class="clear">
+
+            <div class="clear"><br>
 
             </div>
 
             <div class="article">
+                <img src="img/article_2.jpg" alt="First article" title="First article">
+                <h2>article</h2>
+                <p>
+                    I say he look'd on, if I must be content
+                    To stay him from the fatal of our country's bliss.
 
+                </p>
+                <a href="/article.php">
+                    <div class="more">Next</div>
+                </a>
+            </div>
+
+            <div class="article">
+                <img src="img/article_3.jpg" alt="First article" title="First article">
+                <h2>article</h2>
+                <p>
+                    I say he look'd on, if I must be content
+                    To stay him from the fatal of our country's bliss.
+
+                </p>
+                <a href="/article.php">
+                    <div class="more">Next</div>
+                </a>
+            </div>
+
+            <div class="article">
+                <img src="img/article_4.jpg" alt="First article" title="First article">
+                <h2>article</h2>
+                <p>
+                    I say he look'd on, if I must be content
+                    To stay him from the fatal of our country's bliss.
+
+                </p>
+                <a href="/article.php">
+                    <div class="more">Next</div>
+                </a>
+            </div>
+            <div class="article">
+                <img src="img/article_5.jpg" alt="First article" title="First article">
+                <h2>article</h2>
+                <p>
+                    I say he look'd on, if I must be content
+                    To stay him from the fatal of our country's bliss.
+                </p>
+                <a href="/article.php">
+                    <div class="more">Next</div>
+                </a>
             </div>
         </div>
 
