@@ -1,33 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Brrraddy</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css"
+    <?php
+        $title = "News about all";
+        require_once "blocks/head.php";
+    ?>
 </head>
 
 <body>
-    <header>
-        <div id="logo">
-            <a href="/" title="Back to first page"><span>Brrr</span>addy</a>
-        </div>
-
-        <div id="menuHead">
-            <a href="/about.php">
-            <div style="margin-right: 5%">About us</div>
-            </a>
-            <a href="/feedback.php"><div>Feedback</div></a>
-        </div>
-
-        <div id="regAuth">
-            <a href="/reg.php">
-                <div>Registration</div>
-            </a>
-            <a href="/auth.php"<div>Authorisation</div></a>
-        </div>
-    </header>
-</body>
-
+    <?php require_once "blocks/header.php" ?>
     <div id="wrapper">
         <div id="leftCol">
             <div id="bigArticle">
@@ -100,30 +81,9 @@
             </div>
         </div>
 
-        <div id="rightCol">
-            <div class="banner">
-                <img src="img/banner_1.jpg" alt="Banner 1" title="Banner 1">
-            </div>
-            <div class="banner">
-                <img src="img/banner_2.jpg" alt="Banner 2" title="Banner 2">
-            </div>
-        </div>
-    </div>
+        <?php require_once "blocks/rightCol.php" ?>
 
-<footer>
-    <div id="social">
-        <a href="http://vk.com/brrraddy" title="Hanna Sarokina" target="_blank">
-        <img src="img/vk.png" alt="vk" title="Vk">
-        </a>
-        <a href="http://facebook.com/brrraddy" title="Hanna Sarokina" target="_blank">
-        <img src="img/facebook.png" alt="facebook" title="Facebook">
-        </a>
-        <a href="http://instagram.com/brrraddy" title="Hanna Sarokina" target="_blank">
-        <img src="img/inst.png" alt="inst" title="Hanna Sarokina">
-        </a>
-    </div>
-    <div id="rights">
-        All rights reserved &copy; <?php echo date('Y')?>
-    </div>
-</footer>
+
+    <?php require_once "blocks/footer.php" ?>
+</body>
 </html>
