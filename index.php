@@ -1,80 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Brrraddy</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css"
+    <?php
+    require_once "functions/functions.php";
+    $news = getNews(12, $_GET["id"]);
+    $title = $news["title"];
+    require_once "blocks/head.php";
+    ?>
 </head>
 
 <body>
-    <header>
-        <div id="logo">
-            <a href="/" title="Back to first page"><span>Brrr</span>addy</a>
-        </div>
-
-        <div id="menuHead">
-            <a href="/about.php">
-            <div style="margin-right: 5%">About us</div>
-            </a>
-            <a href="/feedback.php"><div>Feedback</div></a>
-        </div>
-
-        <div id="regAuth">
-            <a href="/reg.php">
-                <div>Registration</div>
-            </a>
-            <a href="/auth.php"<div>Authorisation</div></a>
-        </div>
-    </header>
-</body>
-
+    <?php require_once "blocks/header.php" ?>
     <div id="wrapper">
         <div id="leftCol">
-            <div id="bigArticle">
-                <img src="img/article_1.jpg" alt="First article" title="First article">
-                <h2>First article</h2>
-                <p>
-                    I say he look'd on, if I must be content
-                    To stay him from the fatal of our country's bliss.
-                    His lordship pluck'd from this sentence then for prey,
-                    And then let us twain, being the moon,
-                    were she such a case as fills m
-                </p>
-                <div>Next</div>
-            </div>
-            <div class="clear">
+            <?php
+                for ($i=0; $i< count($news); $i++){
+                   if ($i == 0)
+                       echo "<div id=\"bigArticle\">";
+                   else
+                       echo "<div class=\"article\">";
+                   echo '<img src="img/articles/'.$news[$i]["id"].'.jpg" alt="Article '.$news[$i]["id"].'" title="Article '.$news[$i]["id"].'">
+                <h2>'.$news[$i]["title"].'</h2>
+                <p>'.$news[$i]["intro_text"].'</p>
+                <a href="article.php?id='.$news[$i]["id"].'">
+                    <div class="more">Next</div>
+                </a>
+            </div>';
+                if ($i ==0)
+                    echo "<div class=\"clear\"><br></div>";
+                }
+            ?>
 
-            </div>
-
-            <div class="article">
-
-            </div>
         </div>
-
-        <div id="rightCol">
-            <div class="banner">
-                <img src="img/banner_1.jpg" alt="Banner 1" title="Banner 1">
-            </div>
-            <div class="banner">
-                <img src="img/banner_2.jpg" alt="Banner 2" title="Banner 2">
-            </div>
-        </div>
+        <?php require_once "blocks/rightCol.php" ?>
     </div>
 
-<footer>
-    <div id="social">
-        <a href="http://vk.com/brrraddy" title="Hanna Sarokina" target="_blank">
-        <img src="img/vk.png" alt="vk" title="Vk">
-        </a>
-        <a href="http://facebook.com/brrraddy" title="Hanna Sarokina" target="_blank">
-        <img src="img/facebook.png" alt="facebook" title="Facebook">
-        </a>
-        <a href="http://instagram.com/brrraddy" title="Hanna Sarokina" target="_blank">
-        <img src="img/inst.png" alt="inst" title="Hanna Sarokina">
-        </a>
-    </div>
-    <div id="rights">
-        All rights reserved &copy; <?php echo date('Y')?>
-    </div>
-</footer>
+    <?php require_once "blocks/footer.php" ?>
+</body>
 </html>
